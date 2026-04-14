@@ -26,8 +26,34 @@ pip install python-dotenv requests
 
 ---
 
+## 專案結構
+
+```
+e8/
+├── data/                    # 資料檔案
+│   ├── guangfu_overlay.gpkg # 光復地區覆蓋圖層
+│   ├── shelters_hualien.gpkg # 花蓮避難所位置
+│   ├── top5_bottlenecks.gpkg # 前5個瓶頸點
+│   ├── mataian_detections.gpkg # 馬太安地區偵測結果
+│   ├── impact_table.csv     # 影響統計表
+│   └── shelter_risk_audit.json # 避難所風險審計
+├── output/                  # 輸出結果
+│   ├── 12_coverage_gap_map.png # 覆蓋缺口地圖
+│   ├── 07_lake_mask.png     # 堰塞湖遮罩
+│   ├── 08_landslide_threshold_grid.png # 崩塌閾值網格
+│   ├── 09_debris_mask.png   # 土石流遮罩
+│   └── 10_three_masks.png   # 三種遮罩組合圖
+├── script/                  # 分析腳本
+│   └── Week8-Student-Complete.ipynb # 主要分析筆記本
+├── README.md                # 專案說明文件
+└── .env                     # 環境變數（不上傳GitHub）
+```
+
+---
+
 ## 執行方式
 
-1. 確認 `data/` 資料夾有三個 `.gpkg` 檔案
+1. 確認 `data/` 資料夾有所有必要的 `.gpkg` 和 `.csv` 檔案
 2. 在 `e8/` 根目錄啟動 Jupyter：`jupyter notebook`
-3. 依序執行 `Week8-Student.ipynb` 所有 cell
+3. 執行 `script/Week8-Student-Complete.ipynb` 進行完整分析
+4. 輸出結果將儲存至 `output/` 資料夾
